@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appartements Meublés - Réservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .appartements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .appartement {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .appartement img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .reservation {
+            background: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Appartements Meublés - Douala</header>
+
+    <div class="container">
+
+        <h2>Nos Appartements</h2>
+        <div class="appartements">
+            <div class="appartement">
+                <img src="https://source.unsplash.com/400x300/?apartment,luxury" alt="Appartement 1">
+                <h3>Appartement 1</h3>
+                <p>Bel appartement meublé avec toutes les commodités.</p>
+            </div>
+            <div class="appartement">
+                <img src="https://source.unsplash.com/400x300/?apartment,modern" alt="Appartement 2">
+                <h3>Appartement 2</h3>
+                <p>Moderne et spacieux, idéal pour un séjour confortable.</p>
+            </div>
+        </div>
+
+        <div class="reservation">
+            <h2>Réservez votre appartement</h2>
+            <form id="reservationForm">
+                <input type="text" placeholder="Nom complet" required>
+                <input type="email" placeholder="Email" required>
+                <input type="date" required>
+                <select required>
+                    <option value="" disabled selected>Choisissez un appartement</option>
+                    <option>Appartement 1</option>
+                    <option>Appartement 2</option>
+                </select>
+                <button type="submit">Réserver</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>© 2025 - Agence Immobilière Douala</footer>
+
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Réservation envoyée ! Nous vous contacterons bientôt.');
+        });
+    </script>
+
+</body>
+</html>
